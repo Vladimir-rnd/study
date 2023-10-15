@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  --main-font: 'Oswald', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+  --alt-font: 'Montserrat', sans-serif;
+  
+  /*все размеры будут здесь, для обеих страниц, и чтобы можно было быстро поменять размер*/
+  --basement-font-size: 16px;
+  --menu-font-size: 17px;
+  --button-font-size: 20px; 
+  --body-font-size2: 27px;
+  --body-font-size: 29px;
+  --logo-font-size: 30px;
+  --news-font-size: 42px; 
+  --big-font-size: 56px;
+  --template-font-size: 120px;
+  
+  --main-color: #FFF;
+  --highligh-color: #A276FF;
+  --alt-color-1: #f2c94c;
+  --control-color: #858585;
+  --darkblue: #050729;
+  --vdarkblue: #0b0b0d;
+  
+  --thumbs-radius: 11px;
+  --button-radius: 17px;
+}

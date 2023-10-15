@@ -1,0 +1,130 @@
+  
+.moon-icon,
+.sunset-icon,
+.crank-icon,
+.murderer-icon {
+  position: absolute;
+  height: 156px;
+}
+
+.moon-icon {
+  left: 0;
+  border: 6px solid var(--main-color);
+  border-radius: var(--thumbs-radius);
+  height: 145px;
+}
+ 
+.sunset-icon {
+  left: 338px; 
+}
+.crank-icon {
+  left: 676px;
+}
+.murderer-icon {
+  left: 1014px;
+}
+
+.thumbs {
+  position: absolute;
+  top: 811px;
+  left: 591px;
+  width: 1273px;
+  height: 156px;
+}
+.moon-icon:hover{
+  border: 6px solid var(--alt-color-1);
+}
+.downward-triangle-icon {
+  position: relative;
+  top: 1082px;
+  left: 700px;
+  width: 37px;
+  height: 34px;
+ }
+
+.news {
+  position: absolute;
+  top: 1043px;
+  left: 590px;
+  font-size: var(--news-font-size);
+  line-height: 100px;
+}
+
+.button-outline {
+  position: absolute;
+  top: 13px;
+  border-radius: var(--button-radius);
+  border: 3px solid var(--main-color);
+  box-sizing: border-box;
+  width: 352px;
+  height: 70px;
+}
+.button-outline:hover {
+  border-color: var(--alt-color-1);
+}
+
+.learn-more {
+  position: absolute;
+  left: 33px;
+  line-height: 100px;
+  width: 286px;
+  height: 82px;
+}
+
+.button {
+  position: absolute;
+  top: 635px;
+  left: 594px;
+  text-align: center;
+  font-size: var(--button-font-size);
+}
+
+.button-outline:hover {
+  color: var(--alt-color-1);
+}
+
+.lorem-ipsum-dolor-container {
+  position: absolute;
+  margin-top: 25px;
+  top: 1113px;
+  left: 594px;
+  font-family: var(--body-font);
+  font-size: var(--basement-font-size);
+  line-height: 165%;
+  font-weight: 500;
+}
+
+.simple-starter-template-container {
+  position: absolute;
+  top: 254px;
+  left: 592px;
+  font-weight: 700 ;
+}
+
+.simple-starter {
+  margin: 0;
+  font-size: var(--big-font-size);
+}
+
+.template {
+  margin: 0;
+  color: var(--highligh-color);
+  font-size: var(--template-font-size);
+  line-height: 117px;
+}
+
+.template:hover {
+  color: var(--alt-color-1);
+  font-family: var(--alt-font);
+}
+
+.a-clean-simple {
+  position: absolute;
+  top: 484px;
+  left: 593px;
+  width: 1083px;
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: 152%;
+}
+

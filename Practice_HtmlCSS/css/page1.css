@@ -1,0 +1,67 @@
+.dashboard-desktop-child {
+  position: absolute;
+  top: 188px;
+  left: 496px;
+  border-radius: 41px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(30px);
+  border: 2px solid var(--fff);
+  box-sizing: border-box;
+  width: 1552px;
+  height: 1424px;
+}
+.body-text-container {
+  position: absolute;
+  top: 302px;
+  left: 606px;
+  color: #111;
+  display: inline-block;
+  width: 699px;
+  height: 944px;
+  font-size: var(--body-font-size);
+}
+
+.clean-page {
+  margin: 0;
+  font-size: var(--big-font-size);
+  font-style: normal;
+  font-weight: 700;
+}
+.clean-page1 {
+  line-height: 165.69%;
+}
+.line1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.main-text {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  line-height :155%;
+  font-family: var(--body-font);
+}
+
+.free-help-yourself {
+  margin-bottom: -15px;
+  font-size: var(--body-font-size2);
+}
+
+.starsky-icon {
+  position: absolute;
+  top: 291px;
+  left: 1422px;
+  border-radius: 25px;
+  width: 540px;
+  height: 780px;
+}
+.photo-by-judeus {
+  position: absolute;
+  top: 1079px;
+  left: 1572px;
+  font-size: 13px;
+  font-family: var(--alt-font);
+  color: #000;
+}
+
