@@ -5,13 +5,12 @@
 .murderer-icon {
   position: absolute;
   height: 156px;
+  border-radius: var(--thumbs-radius);
+  border: 6px solid var(--main-color);
 }
 
 .moon-icon {
   left: 0;
-  border: 6px solid var(--main-color);
-  border-radius: var(--thumbs-radius);
-  height: 145px;
 }
  
 .sunset-icon {
@@ -31,17 +30,25 @@
   width: 1273px;
   height: 156px;
 }
-.moon-icon:hover{
+.moon-icon:hover,
+.sunset-icon:hover,
+.crank-icon:hover,
+.murderer-icon:hover {
   border: 6px solid var(--alt-color-1);
 }
+
 .downward-triangle-icon {
   position: relative;
   top: 1082px;
   left: 700px;
-  width: 37px;
-  height: 34px;
+  width: 33px;
+  height: 25px;
+  background-image: url('/img/downward-triangle.svg');
  }
 
+ .downward-triangle-icon:hover {
+  background-image: url('/img/downward-triangle-alt.svg');
+ }
 .news {
   position: absolute;
   top: 1043px;
@@ -79,10 +86,6 @@
   font-size: var(--button-font-size);
 }
 
-.button-outline:hover {
-  color: var(--alt-color-1);
-}
-
 .lorem-ipsum-dolor-container {
   position: absolute;
   margin-top: 25px;
@@ -115,7 +118,6 @@
 
 .template:hover {
   color: var(--alt-color-1);
-  font-family: var(--alt-font);
 }
 
 .a-clean-simple {

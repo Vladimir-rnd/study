@@ -83,7 +83,13 @@
   top: 369px;
 }
 
-.home1:hover {
+.home1:hover,
+.item-1:hover,
+.item-2:hover,
+.item-3:hover,
+.item-4:hover,
+.item-5:hover
+ {
   color: var(--alt-color-1);
 }
 
@@ -104,6 +110,13 @@
 
 .pale {
   opacity: 0.5;
+}
+
+.contact:hover,
+.support:hover,
+.social:hover {
+  color: var(--alt-color-1);
+  /*А можно создать общий класс myHover с изменением цвета и подставлять его сразу в html рядом с основным классом? */
 }
 
 .marker-icon-home1,
@@ -133,6 +146,28 @@
   width: 232px;
   height: 73px;
 }
+.social-box {
+  position: absolute;
+  top: 0;
+  left: 1690px;
+  width: 232px;
+  height: 73px;
+  border-bottom-right-radius : var(--thumbs-radius);
+  border-bottom-left-radius: var(--thumbs-radius);
+  background-color: var(--highligh-color);
+}
+.social-box:hover {
+  background-color: var(--alt-color-1);
+}
+
+.twitter-icon{
+  padding-top: 13%;
+  padding-left: 21%;  
+}
+.facebook-icon {
+  padding-left: 38%;
+}
+
 .social-icon:hover {
   color: var(--alt-color-1);
 }
