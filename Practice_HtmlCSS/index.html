@@ -2,11 +2,11 @@
 <html lang="EN">
 
 <head>
-  <meta charset="utf-8" >
-  <meta name="viewport" content="initial-scale=1, width=device-width" >
-  <link rel="stylesheet" href="./css/global.css" >
-  <link rel="stylesheet" href="./css/total.css" >
-  <link rel="stylesheet" href="./css/index.css" >
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/total.css">
+  <link rel="stylesheet" href="./css/index.css">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@700&display=swap");
   </style>
@@ -17,16 +17,16 @@
   <div class="home">
     <div class="dashboard-desktop">
       <div class="background">
-        <img class="fire_bgd-icon" alt="" src="./img/fire_bgd.png" >
-       </div>
-       <div class="sidebar"></div>
+        <img class="fire_bgd-icon" alt="" src="./img/fire_bgd.png">
+      </div>
+      <div class="sidebar"></div>
       <div class="copyright">©2020 ACME LLC.</div>
       <div class="thumbs">
-        <img class="moon-icon" alt="" src="./img/moon.svg" >
-        <img class="sunset-icon" alt="" src="./img/sunset.png" >
-        <img class="crank-icon" alt="" src="./img/crank.png" >
-        <img class="murderer-icon" alt="" src="./img/murderer.png" >
-      </div> 
+        <img class="moon-icon" alt="" src="./img/moon.svg">
+        <img class="sunset-icon" alt="" src="./img/sunset.png">
+        <img class="crank-icon" alt="" src="./img/crank.png">
+        <img class="murderer-icon" alt="" src="./img/murderer.png">
+      </div>
       <div class="menu">
         <div class="home1 active-menu">HOME</div>
         <div><a href="./page1.html" class="item-1">ITEM 1</a> </div>
@@ -65,23 +65,24 @@
         mockups or designs that look nice, quickly.
       </div>
     </div>
-      <!-- <div class="social-box">
-        <img class="twitter-icon" alt="" src="./img/twitter.svg" >
-        <img class="facebook-icon" alt="" src="./img/facebook.svg" >
-      </div> -->
-      <script>
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('social-box').innerHTML = data;
-            })
-            .catch(error => console.log(error));
+    <div class="social-box">
+      <img class="twitter-icon" alt="" src="./img/twitter.svg">
+      <img class="facebook-icon" alt="" src="./img/facebook.svg">
+    </div>
+    <script> 
+      fetch('menu.html') //не работает (
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('social-box').innerHTML = data;
+        })
+        .catch(error => console.log(error));
     </script>
 
-      <div class="yourlogo">
-        <span class="your">YOUR</span>
-        <b class="logo">LOGO</b>
-      </div>
-</div>  
+    <div class="yourlogo">
+      <span class="your">YOUR</span>
+      <b class="logo">LOGO</b>
+    </div>
+  </div>
 </body>
+
 </html>
