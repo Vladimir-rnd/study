@@ -19,7 +19,7 @@
       <div class="background">
         <img class="fire_bgd-icon" alt="" src="./img/fire_bgd.png" >
        </div>
-      <div class="sidebar"></div>
+       <div class="sidebar"></div>
       <div class="copyright">©2020 ACME LLC.</div>
       <div class="thumbs">
         <img class="moon-icon" alt="" src="./img/moon.svg" >
@@ -65,10 +65,18 @@
         mockups or designs that look nice, quickly.
       </div>
     </div>
-      <div class="social-box">
+      <!-- <div class="social-box">
         <img class="twitter-icon" alt="" src="./img/twitter.svg" >
         <img class="facebook-icon" alt="" src="./img/facebook.svg" >
-      </div>
+      </div> -->
+      <script>
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('social-box').innerHTML = data;
+            })
+            .catch(error => console.log(error));
+    </script>
 
       <div class="yourlogo">
         <span class="your">YOUR</span>
