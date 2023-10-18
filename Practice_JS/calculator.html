@@ -1,80 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>  
-    <meta charset="utf-8" >
-    <meta name="viewport" content="initial-scale=1, width=device-width" >
-    <link rel="stylesheet" href="./global.css" >
-    <link rel="stylesheet" href="./calculator.css" >
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap"
-    >
-    <title>Калькулятор</title>
-  </head>
-  <body>
-    <div class="calculator">
-      <div class="numpad">
-        <div class="button-figure button-point">
-          <div class="point">.</div>
-        </div>
-        <div class="button-oval">
-          <div class="zero">0</div>
-        </div>
-        <div class="button-figure first-col third-row">
-          <div class="figure">1</div>
-        </div>
-        <div class="button-figure second-col third-row">
-          <div class="figure">2</div>
-        </div>
-        <div class="button-figure third-col third-row">
-          <div class="figure">3</div>
-        </div>
-        <div class="button-figure first-col second-row">
-          <div class="figure">4</div>
-        </div>
-        <div class="button-figure second-col second-row">
-          <div class="figure">5</div>
-        </div>
-        <div class="button-figure third-col second-row ">
-          <div class="figure">6</div>
-        </div>
-        <div class="button-figure first-col first-row">
-          <div class="figure">7</div>
-        </div>
-        <div class="button-figure second-col first-row">
-          <div class="figure">8</div>
-        </div>
-        <div class="button-figure third-col first-row">
-          <div class="figure">9</div>
-        </div>
-      </div>
-      <div class="symbols">
-        <div class="button-equals">
-          <div class="equals">=</div>
-        </div>
-        <div class="button-operation third-col third-row">
-          <div class="operation">+</div>
-        </div>
-        <div class="button-operation third-col second-row">
-          <div class="operation-">-</div>
-        </div>
-        <div class="button-operation second-col first-row">
-          <div class="operation">×</div>
-        </div>
-        <div class="button-operation first-col first-row">
-          <div class="operation">÷</div>
-        </div>
-        <div class="button-backspace">
-          <div class="operation"> </div>
-        </div>
 
-      </div>
-      <div class="button-clear button-operation">
-        <div class="clear">C</div>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <link rel="stylesheet" href="./calculator.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap">
+  <title>Калькулятор</title>
+</head>
 
-      <div class="calc-screen"></div>
-
+<body>
+  <div class="calculator">
+    <div class="calc-screen">
+      <div class="process">10</div>
     </div>
-  </body>
+    <div class="numpad">
+      <button class="btn-clear first-col first-row">C</button>
+      <button class="btn-operation second-col first-row">÷</button>
+      <button class="btn-operation third-col first-row">×</button>
+      <button class="btn-backspace fourth-col first-row"></button>
+
+      <button class="btn-figure first-col second-row">7</button>
+      <button class="btn-figure second-col second-row">8</button>
+      <button class="btn-figure third-col second-row">9</button>
+      <button class="btn-operation fourth-col second-row">–</button>
+
+      <button class="btn-figure first-col third-row">4</button>
+      <button class="btn-figure second-col third-row">5</button>
+      <button class="btn-figure third-col third-row">6</button>
+      <button class="btn-operation fourth-col third-row">+</button>
+
+      <button class="btn-figure first-col fourth-row">1</button>
+      <button class="btn-figure second-col fourth-row">2</button>
+      <button class="btn-figure third-col fourth-row">3</button>
+      <button class="btn-equals fourth-col fourth-row">=</button>
+
+      <button class="btn-zero first-col fifth-row">0</button>
+      <button class="btn-point third-col fifth-row">.</button>
+    </div>
+  </div>
+  <script src="./calculator.js"></script>
+</body>
+
 </html>

@@ -1,83 +1,62 @@
 * {
+  margin: 0;
+  padding: 0;
   position: absolute;
 }
-
 .numpad {
-  top: 324px;
-  left: var(--numpad-position);
-  color: var(--color-white);
+  top: var(--numpad-top-position);
+  left: var(--numpad-left-position);
 }
-.symbols {
-  top: var(--symbol-position);
-  left: 107px;
+
+.btn-clear,
+.btn-figure, 
+.btn-operation,
+.btn-backspace,
+.btn-equals,
+.btn-zero,
+.btn-point
+ {
+  width: var(--btn-size);
+  height: var(--btn-size);
+  color: var(--color-white);
+  border-radius: var(--btn-radius);
+  border: none;
+}
+ .btn-figure,
+ .btn-point,
+ .btn-equals,
+ .btn-zero {
+  font-size: var(--font-size-figure);
+  background-color: var(--color-steelblue);
+}
+.btn-clear,
+.btn-operation {
+  color: var(--color-calc);
+  background-color: var(--color-gainsboro);
   font-size: var(--font-size-symbols);
   font-weight: 300;
 }
-
-.button-figure,
-.button-operation,
-.button-backspace
- {
-  width: var(--button-size);
-  height: var(--button-size);
-  border-radius: var(--button-radius);
+.btn-clear {
+  font-size: var(--font-size-clear);
 }
- .button-figure {
-  background-color: var(--color-steelblue);
+.btn-backspace {
+  background-color: var(--color-backspace);
 }
-.button-operation {
-  background-color: var(--color-gainsboro);
+.btn-point {
+  font-size: var(--font-size-clear);
 }
 
-.point {
-  top: 16px;
-  left: 30px;
-}
-.zero {
-  top: 20px;
-  left: 65px;
-}
-.figure {
-  top: 20px;
-  left: 27px;
-}
-.equals {
-  top: 43px;
-  left: 18px;
-}
-.operation {
-  top: 0;
-  left: 17px;
-}
-.operation- {
-  top: 3px;
-  left: 22px;
-}
-.clear {
-  top: 10px;
-  left: 19px;
-}
-
-.button-point {
-  top: var(--fourth-position);
-  left: var(--third-position);
-  font-size: var(--font-size-point);
-}
-.button-oval {
-  top:  var(--fourth-position);
-  width: 146px;
-  height: var(--button-size);
+.btn-equals,
+.btn-zero {
   border-radius: var(--zero-radius);
-  background: var(--color-steelblue);
 }
-.button-equals {
-  top: var(--fourth-position);
-  left: var(--third-position);
-  width: var(--button-size);
-  height: 146px; /*можно как-то умножать пиксели? --button-size*2  */
-  color: var(--color-white);
-  border-radius: var(--zero-radius);
+.btn-equals {
+  height: 146px;
   background-color: var(--color-equals);
+}
+.btn-zero {
+  width: 146px;
+  height: var(--btn-size);
 }
 
 .first-col {
@@ -92,6 +71,7 @@
 .fourth-col {
   left: var(--fourth-position);
 }
+
 .first-row {
   top: var(--first-position);
 }
@@ -101,33 +81,65 @@
 .third-row {
   top: var(--third-position);
 }
-
-.button-clear {
-  top: var(--symbol-position);
-  left: var(--numpad-position);
-  font-size: var(--font-size-clear);
+.fourth-row {
+  top: var(--fourth-position);
+}
+.fifth-row {
+  top: var(--fifth-position);
 }
 
-.button-backspace {
-  left: var(--third-position);
-  background-color: var(--color-backspace);
-}
-
-.calc-screen
- {
+.calc-screen {
   top: 28px;
   left: 30px;
   width: 300px;
   height: 210px;
+  font-size: var(--font-size-clear);
+  display: flex;
+  align-items:end;
+  flex-direction: row-reverse;
+  word-wrap: break-word;
+  color: var(--color-white);
   border-radius: var(--screen-radius);
   background-color: var(--color-screen);
 }
+.process{
+  padding: 10px;
+}
 .calculator {
-  position: relative;
-  border-radius: var(--screen-radius);
-  background-color: var(--color-calc);
   width: 360px;
   height: 640px;
-  font-size: var(--font-size-figure);
+  border-radius: var(--screen-radius);
+  background-color: var(--color-calc);
+  box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25);
   font-family: var(--font-inter);
+}
+
+:root {
+  --font-inter: Inter;
+
+  --font-size-figure: 25px;
+  --font-size-clear: 40px;
+  --font-size-symbols: 50px;
+  
+  --color-gainsboro: #d9d9d9;
+  --color-white: #fff;
+  --color-steelblue: #4b72a1;
+  --color-backspace: #e94560;
+  --color-screen: #afafb3;
+  --color-equals: #0f3460;
+  --color-calc: #1a1a2e;
+
+  --numpad-left-position: 29px;
+  --numpad-top-position: 246px;
+  --first-position: 0px;
+  --second-position: 78px;
+  --third-position: 156px;
+  --fourth-position: 234px;
+  --fifth-position: 312px;
+    
+  --btn-size: 68px;
+
+  --screen-radius: 20px;
+  --zero-radius: 37px;
+  --btn-radius: 50%;
 }
