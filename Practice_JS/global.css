@@ -1,0 +1,29 @@
+:root {
+  --font-inter: Inter;
+
+  --font-size-figure: 23px;
+  --font-size-point: 30px;
+  --font-size-clear: 40px;
+  --font-size-symbols: 50px;
+  
+  --color-gainsboro: #d9d9d9;
+  --color-white: #fff;
+  --color-steelblue: #4b72a1;
+  --color-backspace: #e94560;
+  --color-screen: #afafb3;
+  --color-equals: #0f3460;
+  --color-calc: #1a1a2e;
+
+  --first-position: 0px;
+  --numpad-position: 29px;
+  --second-position: 78px;
+  --third-position: 156px;
+  --fourth-position: 234px;
+  --symbol-position: 246px;
+  
+  --button-size: 68px;
+
+  --screen-radius: 30px;
+  --zero-radius: 37px;
+  --button-radius: 50%;
+}

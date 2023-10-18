@@ -1,0 +1,133 @@
+* {
+  position: absolute;
+}
+
+.numpad {
+  top: 324px;
+  left: var(--numpad-position);
+  color: var(--color-white);
+}
+.symbols {
+  top: var(--symbol-position);
+  left: 107px;
+  font-size: var(--font-size-symbols);
+  font-weight: 300;
+}
+
+.button-figure,
+.button-operation,
+.button-backspace
+ {
+  width: var(--button-size);
+  height: var(--button-size);
+  border-radius: var(--button-radius);
+}
+ .button-figure {
+  background-color: var(--color-steelblue);
+}
+.button-operation {
+  background-color: var(--color-gainsboro);
+}
+
+.point {
+  top: 16px;
+  left: 30px;
+}
+.zero {
+  top: 20px;
+  left: 65px;
+}
+.figure {
+  top: 20px;
+  left: 27px;
+}
+.equals {
+  top: 43px;
+  left: 18px;
+}
+.operation {
+  top: 0;
+  left: 17px;
+}
+.operation- {
+  top: 3px;
+  left: 22px;
+}
+.clear {
+  top: 10px;
+  left: 19px;
+}
+
+.button-point {
+  top: var(--fourth-position);
+  left: var(--third-position);
+  font-size: var(--font-size-point);
+}
+.button-oval {
+  top:  var(--fourth-position);
+  width: 146px;
+  height: var(--button-size);
+  border-radius: var(--zero-radius);
+  background: var(--color-steelblue);
+}
+.button-equals {
+  top: var(--fourth-position);
+  left: var(--third-position);
+  width: var(--button-size);
+  height: 146px; /*можно как-то умножать пиксели? --button-size*2  */
+  color: var(--color-white);
+  border-radius: var(--zero-radius);
+  background-color: var(--color-equals);
+}
+
+.first-col {
+  left: var(--first-position);
+}
+.second-col {
+  left: var(--second-position);
+}
+.third-col {
+  left: var(--third-position);
+}
+.fourth-col {
+  left: var(--fourth-position);
+}
+.first-row {
+  top: var(--first-position);
+}
+.second-row {
+  top: var(--second-position);
+}
+.third-row {
+  top: var(--third-position);
+}
+
+.button-clear {
+  top: var(--symbol-position);
+  left: var(--numpad-position);
+  font-size: var(--font-size-clear);
+}
+
+.button-backspace {
+  left: var(--third-position);
+  background-color: var(--color-backspace);
+}
+
+.calc-screen
+ {
+  top: 28px;
+  left: 30px;
+  width: 300px;
+  height: 210px;
+  border-radius: var(--screen-radius);
+  background-color: var(--color-screen);
+}
+.calculator {
+  position: relative;
+  border-radius: var(--screen-radius);
+  background-color: var(--color-calc);
+  width: 360px;
+  height: 640px;
+  font-size: var(--font-size-figure);
+  font-family: var(--font-inter);
+}
