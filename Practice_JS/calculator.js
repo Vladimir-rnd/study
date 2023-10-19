@@ -5,8 +5,8 @@ let buttons = Array.from(
 
 let memoryValue = 0;
 let stopButton = false;
-document.getElementById("MR").style.opacity = 0.8;
-document.getElementById("equals").style.opacity = 0.7;
+ChangeOpacity(document.getElementById("MR"), 0.8);
+ChangeOpacity(document.getElementById("equals"), 0.7);
 
 buttons.map((button) => {
   button.addEventListener("click", (e) => {
@@ -15,29 +15,25 @@ buttons.map((button) => {
     switch (value) {
       case "C":
         screen.innerText = "0";
-        document.getElementById("equals").style.opacity = 0.7;
+        ChangeOpacity(document.getElementById("equals"), 0.7);
         stopButton = false;
         break;
       case "MC":
         memoryValue = 0;
-        document.getElementById("MR").style.opacity = 0.8;
+        ChangeOpacity(document.getElementById("MR"), 0.8);
         stopButton = false;
         break;
       case "MR":
         if (memoryValue != 0) {
           screen.innerText = memoryValue;
-          if (document.getElementById("equals").style.opacity != 1) {
-            document.getElementById("equals").style.opacity = 1;
-          }
+          ChangeOpacity(document.getElementById("equals"), 1);
         }
         stopButton = true;
         break;
       case "M+":
         if (Number(screen.innerText)) {
           memoryValue += screen.innerText;
-          if (document.getElementById("MR").style.opacity != 1) {
-            document.getElementById("MR").style.opacity = 1;
-          }
+          ChangeOpacity(document.getElementById("MR"), 1);
         }
         else {
           screen.innerText = "Ошибка: попытка добавить в память нечисловое значение" + ex.passedText;
@@ -59,7 +55,7 @@ buttons.map((button) => {
         screen.innerText = screen.innerText.slice(0, -1);
         if (screen.innerText == "") {
           screen.innerText = "0"
-          document.getElementById("equals").style.opacity = 0.7;
+          ChangeOpacity(document.getElementById("equals"), 0.7);
         }
         stopButton = false; //уже надоело копипастить эту строку, наверняка можно сделать через какое-то общее свойство
         break;
@@ -93,13 +89,16 @@ buttons.map((button) => {
           screen.innerText += value;
         }
         if (screen.innerText == "0") {
-          document.getElementById("equals").style.opacity = 0.7;
+          ChangeOpacity(document.getElementById("equals"), 0.7);
         }
-        else if (document.getElementById("equals").style.opacity != 1) {
-          document.getElementById("equals").style.opacity = 1;
-        }
+        else ChangeOpacity(document.getElementById("equals"), 1);
         stopButton = false;
     }
   }
   );
 });
+function ChangeOpacity(element, opc) {
+ if (element.style.opacity != opc) {
+      element.style.opacity = opc;
+    }
+  }

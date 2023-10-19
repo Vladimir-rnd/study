@@ -29,12 +29,7 @@
   box-shadow: 0px 4px 8px 0px var(--color-shadow) inset;
 }
 
-.btn-clear,
-.btn-figure,
-.btn-operation,
-.btn-equals,
-.btn-zero,
-.btn-point {
+.calculator > button {
   width: var(--btn-size);
   height: var(--btn-size);
   border-radius: var(--btn-radius);
@@ -71,19 +66,19 @@
   font-size: var(--font-size-memory);
 }
 
-.btn-equals,
-.btn-zero {
+.calculator .btn-equals,
+.calculator .btn-zero {
   border-radius: var(--zero-radius);
 }
 
-.btn-equals {
+.calculator .btn-equals {
   height: 156px;
   grid-column: 4;
   grid-row: 7;
   background-color: var(--color-equals);
 }
 
-.btn-zero {
+.calculator .btn-zero {
   width: 146px;
   grid-column: 1 / span 2;
 }
