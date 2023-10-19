@@ -1,145 +1,126 @@
 * {
-  margin: 0;
-  padding: 0;
-  position: absolute;
+  box-sizing: border-box;
 }
-.numpad {
-  top: var(--numpad-top-position);
-  left: var(--numpad-left-position);
+.calculator {
+  width: 360px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 75px;
+  gap: 10px;
+  border-radius: var(--screen-radius);
+  background-color: var(--color-calc);
+  box-shadow: 8px 8px 4px 0px var(--color-shadow);
+  font-family: var(--font-inter);
+}
+
+.calc-screen {
+  padding: 10px;
+  grid-column: 1 / -1;
+  grid-row: 1 / 3;
+  word-break: break-all;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  font-size: var(--font-size-clear);
+  color: var(--color-white);
+  border-radius: var(--screen-radius);
+  background-color: var(--color-screen);
+  box-shadow: 0px 4px 8px 0px var(--color-shadow) inset;
 }
 
 .btn-clear,
-.btn-figure, 
+.btn-figure,
 .btn-operation,
-.btn-backspace,
 .btn-equals,
 .btn-zero,
-.btn-point
- {
+.btn-point {
   width: var(--btn-size);
   height: var(--btn-size);
-  color: var(--color-white);
   border-radius: var(--btn-radius);
   border: none;
 }
- .btn-figure,
- .btn-point,
- .btn-equals,
- .btn-zero {
+
+.btn-figure,
+.btn-point,
+.btn-equals,
+.btn-zero {
+  color: var(--color-white);
   font-size: var(--font-size-figure);
   background-color: var(--color-steelblue);
 }
-.btn-clear,
+
 .btn-operation {
-  color: var(--color-calc);
   background-color: var(--color-gainsboro);
   font-size: var(--font-size-symbols);
-  font-weight: 300;
 }
-.btn-clear {
-  font-size: var(--font-size-clear);
-}
-.btn-backspace {
-  background-color: var(--color-backspace);
-}
+
+.clear-bgd {
+  background-color: var(--color-clear);
+ }
+ .memory-bgd {
+  background-color: var(--color-memory);
+ }
+
+.btn-clear,
+.btn-equals,
 .btn-point {
   font-size: var(--font-size-clear);
+}
+.font-s-memory {
+  font-size: var(--font-size-memory);
 }
 
 .btn-equals,
 .btn-zero {
   border-radius: var(--zero-radius);
 }
+
 .btn-equals {
-  height: 146px;
+  height: 156px;
+  grid-column: 4;
+  grid-row: 7;
   background-color: var(--color-equals);
 }
+
 .btn-zero {
   width: 146px;
-  height: var(--btn-size);
+  grid-column: 1 / span 2;
 }
 
-.first-col {
-  left: var(--first-position);
+.btn-clear:hover,
+.btn-figure:hover,
+.btn-operation:hover,
+.btn-equals:hover,
+.btn-zero:hover,
+.btn-point:hover {
+  box-shadow: 0px 4px 8px 0px var(--color-shadow) inset;
 }
-.second-col {
-  left: var(--second-position);
-}
-.third-col {
-  left: var(--third-position);
-}
-.fourth-col {
-  left: var(--fourth-position);
-}
-
-.first-row {
-  top: var(--first-position);
-}
-.second-row {
-  top: var(--second-position);
-}
-.third-row {
-  top: var(--third-position);
-}
-.fourth-row {
-  top: var(--fourth-position);
-}
-.fifth-row {
-  top: var(--fifth-position);
-}
-
-.calc-screen {
-  top: 28px;
-  left: 30px;
-  width: 300px;
-  height: 210px;
-  font-size: var(--font-size-clear);
-  display: flex;
-  align-items:end;
-  flex-direction: row-reverse;
-  word-wrap: break-word;
-  color: var(--color-white);
-  border-radius: var(--screen-radius);
-  background-color: var(--color-screen);
-}
-.process{
-  padding: 10px;
-}
-.calculator {
-  width: 360px;
-  height: 640px;
-  border-radius: var(--screen-radius);
-  background-color: var(--color-calc);
-  box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.25);
-  font-family: var(--font-inter);
-}
+  .btn-figure:hover,
+  .btn-zero:hover
+   {font-size: 200%; }
 
 :root {
   --font-inter: Inter;
 
   --font-size-figure: 25px;
+  --font-size-memory: 30px;
   --font-size-clear: 40px;
-  --font-size-symbols: 50px;
-  
+  --font-size-symbols: 45px;
+
   --color-gainsboro: #d9d9d9;
+  --color-clear: #c27a7a;
+  --color-memory: #7ec494;
   --color-white: #fff;
   --color-steelblue: #4b72a1;
-  --color-backspace: #e94560;
   --color-screen: #afafb3;
   --color-equals: #0f3460;
   --color-calc: #1a1a2e;
+  --color-shadow: rgba(0, 0, 0, 0.25);
 
-  --numpad-left-position: 29px;
-  --numpad-top-position: 246px;
-  --first-position: 0px;
-  --second-position: 78px;
-  --third-position: 156px;
-  --fourth-position: 234px;
-  --fifth-position: 312px;
-    
   --btn-size: 68px;
 
   --screen-radius: 20px;
-  --zero-radius: 37px;
+  --zero-radius: 35px;
   --btn-radius: 50%;
 }

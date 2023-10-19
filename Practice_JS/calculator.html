@@ -11,33 +11,34 @@
 
 <body>
   <div class="calculator">
-    <div class="calc-screen">
-      <div class="process">10</div>
-    </div>
-    <div class="numpad">
-      <button class="btn-clear first-col first-row">C</button>
-      <button class="btn-operation second-col first-row">÷</button>
-      <button class="btn-operation third-col first-row">×</button>
-      <button class="btn-backspace fourth-col first-row"></button>
+    <output class="calc-screen">0</output>
+    <button class="btn-clear clear-bgd">C</button>
+    <button class="btn-clear clear-bgd font-s-memory" id="MC">MC</button>
+    <button class="btn-clear clear-bgd font-s-memory">BS</button>
+    <button class="btn-operation">÷</button>
+        
+    <button class="btn-clear memory-bgd font-s-memory" id="MR">MR</button>
+    <button class="btn-clear memory-bgd font-s-memory">M+</button>
+    <button class="btn-clear memory-bgd font-s-memory" id="M-">M-</button>
+    <button class="btn-operation">×</button>
+    
+    <button class="btn-figure">7</button>
+    <button class="btn-figure">8</button>
+    <button class="btn-figure">9</button>
+    <button class="btn-operation">–</button>
 
-      <button class="btn-figure first-col second-row">7</button>
-      <button class="btn-figure second-col second-row">8</button>
-      <button class="btn-figure third-col second-row">9</button>
-      <button class="btn-operation fourth-col second-row">–</button>
+    <button class="btn-figure">4</button>
+    <button class="btn-figure">5</button>
+    <button class="btn-figure">6</button>
+    <button class="btn-operation">+</button>
 
-      <button class="btn-figure first-col third-row">4</button>
-      <button class="btn-figure second-col third-row">5</button>
-      <button class="btn-figure third-col third-row">6</button>
-      <button class="btn-operation fourth-col third-row">+</button>
+    <button class="btn-figure">1</button>
+    <button class="btn-figure">2</button>
+    <button class="btn-figure">3</button>
+    <button class="btn-equals" id="equals">=</button>
 
-      <button class="btn-figure first-col fourth-row">1</button>
-      <button class="btn-figure second-col fourth-row">2</button>
-      <button class="btn-figure third-col fourth-row">3</button>
-      <button class="btn-equals fourth-col fourth-row">=</button>
-
-      <button class="btn-zero first-col fifth-row">0</button>
-      <button class="btn-point third-col fifth-row">.</button>
-    </div>
+    <button class="btn-zero">0</button>
+    <button class="btn-point">.</button>
   </div>
   <script src="./calculator.js"></script>
 </body>
