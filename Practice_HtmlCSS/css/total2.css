@@ -1,0 +1,21 @@
+.home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-box {
+    position: relative;
+    top: -100%;
+    margin-left: auto;
+    left: auto;
+}
+/* .sidebar {
+    width: 20%;
+  } */
+  /* .yourlogo {
+    position: absolute;
+    top: 72px;
+    left: 93px;
+    font-family: var(--main-font);
+    font-size: var(--logo-font-size);
+  } */

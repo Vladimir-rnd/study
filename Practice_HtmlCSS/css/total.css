@@ -1,177 +1,99 @@
 .home {
-  position: relative;
-  width: 100%;
-  height: 1297px;
-  text-align: left;
+  width: var(--screen-width);
+  height: var(--screen-height);
   color: var(--main-color);
   font-family: var(--main-font);
 }
-
 .dashboard-desktop {
-  position: absolute;
-  width: 2173px;
-  height: 1296px;
-  border-radius: 70px;
-  opacity: 0.9;
+  width: var(--screen-width);
+  height: var(--screen-height);
+  opacity: 0.9; /*убрать после отладки*/
   overflow: hidden;
-  box-shadow: 0px 4px 150px 0px rgba(0, 0, 0, 0.75);
-  top: 1px;
   background-color: var(--darkblue);
 }
-
 .background {
   position: absolute;
-  width: 2172px;
-  height: 1550px;
+  width: var(--screen-width);
+  height: var(--screen-height);
 }
-
 .fire_bgd-icon {
-  position: absolute;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: var(--screen-height);
   opacity: 0.7;
 }
-
 .sidebar {
   position: absolute;
   background-color: var(--vdarkblue);
-  backdrop-filter: blur(40px);
-  width: 384px;
-  height: 1296px;
+  width: var(--sidebar-width);
+  height: var(--screen-height);
   opacity: 0.5;
 }
-
-.copyright {
-  position: absolute;
-  top: 1166px;
-  left: 131px;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  opacity: 0.25;
+.menu {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  top: 72px;
+  width: calc(var(--sidebar-width) * 0.9);
+  height: var(--screen-height);
+  align-items: center;
 }
-.home1,
-.item-1,
-.item-2,
-.item-3,
-.item-4,
-.item-5 {
-  position: absolute;
-  left: 139px;
+.menu-item {
   font-size: var(--menu-font-size);
   color: var(--main-color);
-  text-decoration:none;
+  text-decoration: none;
+  margin-top: 14%;
 }
-.active-menu {
-  color: var(--highligh-color);
+.active-menu-item::before {
+  position: relative; 
+  content: url('../img/marker.svg'); 
+  right: calc(var(--sidebar-width) * 0.4); /* не научно */
+  top: calc(var(--marker-height) / 3.5); /*тут как-то надо учесть высоту надписей, но пока костыль (*/
 }
-.home1 {
-  top: 9px;
-}
-.item-1 {
-  top: 81px;
-}
-.item-2 {
-  top: 153px;
-}
-.item-3 {
-  top: 225px;
-}
-.item-4 {
-  top: 297px;
-}
-.item-5 {
-  top: 369px;
-}
-
-.home1:hover,
-.item-1:hover,
-.item-2:hover,
-.item-3:hover,
-.item-4:hover,
-.item-5:hover
- {
+.menu-item:hover {
   color: var(--alt-color-1);
 }
-
 .contact,
 .support,
 .social {
-  position: absolute;
-  left: 131px;
   opacity: 0.8;
 }
-.support,
-.social {
-  top: 788px;
-}
 .contact {
-  top: 860px;
+  margin-top: 116%;
 }
-
-.pale {
-  opacity: 0.5;
-}
-
 .contact:hover,
 .support:hover,
 .social:hover {
   color: var(--alt-color-1);
-  /*А можно создать общий класс myHover с изменением цвета и подставлять его сразу в html рядом с основным классом? */
 }
-
-.marker-icon-home1,
-.marker-icon-item-1 {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 5px;
-  height: 42px;
-}
-
-.marker-icon-item-1 {
-  top: 72px;
-}
-
-.menu {
-  position: absolute;
-  left: 0;
-  top: 200px;
-  width: 259px;
-  height: 885px;
-}
-.social-icon {
-  position: absolute;
-  top: 0;
-  left: 1690px;
-  width: 232px;
-  height: 73px;
+.copyright {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0.25;
+  margin-top: 23%;
 }
 .social-box {
   position: absolute;
   top: 0;
-  left: 1690px;
+  left: 1640px;
   width: 232px;
   height: 73px;
-  border-bottom-right-radius : var(--thumbs-radius);
-  border-bottom-left-radius: var(--thumbs-radius);
+  border-radius: 0 0 var(--thumbs-radius) var(--thumbs-radius);
   background-color: var(--highligh-color);
 }
 .social-box:hover {
   background-color: var(--alt-color-1);
 }
-
-.twitter-icon{
+.twitter-icon {
   padding-top: 13%;
-  padding-left: 21%;  
+  padding-left: 21%;
 }
 .facebook-icon {
   padding-left: 38%;
 }
-
-.social-icon:hover {
-  color: var(--alt-color-1);
+.yourlogo {
+  margin-bottom: 41px;  /* с макета*/
+  font-family: var(--main-font);
+  font-size: var(--logo-font-size);
 }
-
 .your {
   color: var(--highligh-color);
   font-weight: 600;
@@ -179,16 +101,7 @@
 .your:hover {
   color: var(--alt-color-1);
 }
-
 .logo {
   letter-spacing: 4.5%;
   color: var(--main-color);
-}
-
-.yourlogo {
-  position: absolute;
-  top: 72px;
-  left: 93px;
-  font-family: var(--main-font);
-  font-size: var(--logo-font-size);
 }

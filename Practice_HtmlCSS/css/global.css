@@ -18,7 +18,12 @@ body {
   --news-font-size: 42px; 
   --big-font-size: 56px;
   --template-font-size: 120px;
-  
+
+  --screen-height: 1296px;
+  --screen-width: 2173px;
+  --sidebar-width: calc(var(--screen-width) * 0.175); /*ну почти. на макете 384, а тут 380px */
+  --marker-height: 42px;
+    
   --main-color: #FFF;
   --highligh-color: #A276FF;
   --alt-color-1: #f2c94c;

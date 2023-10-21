@@ -1,40 +1,34 @@
-  
-.moon-icon,
-.sunset-icon,
-.crank-icon,
-.murderer-icon {
-  position: absolute;
-  height: 156px;
-  border-radius: var(--thumbs-radius);
-  border: 6px solid var(--main-color);
-}
-
-.moon-icon {
-  left: 0;
-}
- 
-.sunset-icon {
-  left: 338px; 
-}
-.crank-icon {
-  left: 676px;
-}
-.murderer-icon {
-  left: 1014px;
-}
-
 .thumbs {
   position: absolute;
   top: 811px;
   left: 591px;
   width: 1273px;
   height: 156px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.moon-icon,
+.sunset-icon,
+.crank-icon,
+.murderer-icon {
+  height: auto;
+  border-radius: var(--thumbs-radius);
+  border: 6px solid var(--main-color);
 }
 .moon-icon:hover,
 .sunset-icon:hover,
 .crank-icon:hover,
 .murderer-icon:hover {
   border: 6px solid var(--alt-color-1);
+}
+
+.news {
+  position: absolute;
+  top: 1043px;
+  left: 590px;
+  font-size: var(--news-font-size);
+  line-height: 100px;
 }
 
 .downward-triangle-icon {
@@ -49,13 +43,6 @@
  .downward-triangle-icon:hover {
   background-image: url('/img/downward-triangle-alt.svg');
  }
-.news {
-  position: absolute;
-  top: 1043px;
-  left: 590px;
-  font-size: var(--news-font-size);
-  line-height: 100px;
-}
 
 .button-outline {
   position: absolute;
