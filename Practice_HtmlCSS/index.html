@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="EN">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, width=device-width">
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/total.css">
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" media="(max-width: 1200px)" href="./css/total2.css">
+  <!-- <link rel="stylesheet" media="(max-width: 992px)" href="./css/total2.css"> -->
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@700&display=swap");
   </style>
   <title>Практическое задание Верстка сайтов (HTML5+CSS3)</title>
 </head>
+
 <body>
   <div class="home">
     <div class="dashboard-desktop">
@@ -19,60 +21,73 @@
         <img class="fire_bgd-icon" alt="" src="./img/fire_bgd.png">
       </div>
       <div class="sidebar"></div>
-      <div class="menu">
+      <div class="social-box">
+        <img id="twitter-1" src="./img/twitter.svg">
+        <img id="facebook-1" src="./img/facebook.svg">
+      </div>
+      <div class="heading">
+        <div class="burger" id="burger">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
         <div class="yourlogo">
           <span class="your">YOUR</span>
           <b class="logo">LOGO</b>
         </div>
+      </div>
+      <nav class="menu" id="menu">
         <a href="#" class="menu-item active-menu-item">HOME</a>
         <a href="./page1.html" class="menu-item">ITEM 1</a>
         <a href="#" class="menu-item">ITEM 2</a>
         <a href="#" class="menu-item">ITEM 3</a>
         <a href="#" class="menu-item">ITEM 4</a>
         <a href="#" class="menu-item">ITEM 5</a>
-
-        <div class="menu-item contact">CONTACT</div>
         <div class="menu-item support">SUPPORT</div>
+        <div class="menu-item contact">CONTACT</div>
         <div class="menu-item copyright ">©2020 ACME LLC.</div>
+      </nav>
+      <div class="main-window">
+        <div class="simple-starter-templ">
+          <p class="simple-starter">
+            <span>SIMPLE STARTER</span>
+          </p>
+          <p class="template">
+            <span>TEMPLATE</span>
+          </p>
+        </div>
+        <div class="a-clean-simple">
+          A clean simple desktop design with space to add & alter items instead
+          of removing them. An easy to use starting point for beginners to make
+          mockups or designs that look nice, quickly.
+        </div>
+        <button class="button">LEARN MORE</button>
+        <div class="thumbs">
+          <img class="thumbs-icon" alt="" src="./img/moon.png">
+          <img class="thumbs-icon" alt="" src="./img/sunset.png">
+          <img class="thumbs-icon" alt="" src="./img/crank.png">
+          <img class="thumbs-icon" alt="" src="./img/murderer.png">
+        </div>
+        <div class="NewsBox">NEWS
+          <svg id="downwardTriangle" width="33" height="26" viewBox="0 0 33 26" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path id="downwardTriangle" d="M3.19246 2L16.5 23.1805L29.8075 2H3.19246Z" stroke="#A276FF"
+              stroke-width="3" />
+          </svg>
+        </div>
+        <div class="lorem-ipsum-dolor-container">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          accumsan sed diam ut consectetur. Nunc maximus magna dolor, eget
+          accumsan leo tempor eget.
+        </div>
       </div>
-      <div class="thumbs">
-        <img class="moon-icon" alt="" src="./img/moon.svg">
-        <img class="sunset-icon" alt="" src="./img/sunset.png">
-        <img class="crank-icon" alt="" src="./img/crank.png">
-        <img class="murderer-icon" alt="" src="./img/murderer.png">
-      </div>
-      <div class="NewsBox">
-        <b class="news">NEWS</b>
-        <!-- <div class="downward-triangle-icon"></div> -->
-      </div>
-      <div class="button">
-        <div class="button-outline"></div>
-        <b class="learn-more">LEARN MORE</b>
-      </div>
-      <div class="lorem-ipsum-dolor-container">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-        accumsan sed diam ut consectetur. Nunc maximus magna dolor, eget
-        accumsan leo tempor eget.
-      </div>
-      <div class="simple-starter-template-container">
-        <p class="simple-starter">
-          <span>SIMPLE STARTER</span>
-        </p>
-        <p class="template">
-          <span>TEMPLATE</span>
-        </p>
-      </div>
-      <div class="a-clean-simple">
-        A clean simple desktop design with space to add & alter items instead
-        of removing them. An easy to use starting point for beginners to make
-        mockups or designs that look nice, quickly.
+      <div class="footer">
+        <img class="twitter-mob" src="./img/twitter.svg">
+        <img class="facebook-mob" src="./img/facebook.svg">
       </div>
     </div>
-    <div class="social-box">
-      <img class="twitter-icon" alt="" src="./img/twitter.svg">
-      <img class="facebook-icon" alt="" src="./img/facebook.svg">
-    </div>
-
   </div>
+  <script src="menu.js"></script>
 </body>
+
 </html>

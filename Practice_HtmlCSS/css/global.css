@@ -1,36 +1,47 @@
-body {
-  margin: 0;
-  line-height: normal;
+html {
+  font-size: 62.5%;
 }
 
-:root {
+body {
+  margin: 0;
+  box-sizing: border-box;
+  line-height: normal;
+  
   --main-font: 'Oswald', sans-serif;
   --body-font: 'Roboto', sans-serif;
   --alt-font: 'Montserrat', sans-serif;
   
   /*все размеры будут здесь, для обеих страниц, и чтобы можно было быстро поменять размер*/
-  --basement-font-size: 16px;
-  --menu-font-size: 17px;
-  --button-font-size: 20px; 
-  --body-font-size2: 27px;
-  --body-font-size: 29px;
-  --logo-font-size: 30px;
-  --news-font-size: 42px; 
-  --big-font-size: 56px;
-  --template-font-size: 120px;
+  --basement-font-size: 1.4rem; /*14px;*/
+  --menu-font-size: 1.6rem;
+  --button-font-size: 2rem; 
+  --body-font-size: 2.5rem;
+  --page-font-size: 2.5rem;
+  --body-font-size2: 2.3rem;
+  --logo-font-size: 2.8rem; 
+  --news-font-size: 3.5rem; 
+  --big-font-size: 5rem;
+  --template-font-size: 10.5rem;
 
-  --screen-height: 1296px;
-  --screen-width: 2173px;
-  --sidebar-width: calc(var(--screen-width) * 0.175); /*ну почти. на макете 384, а тут 380px */
-  --marker-height: 42px;
-    
+  --screen-height: 108rem; /* 1080px;*/
+  --screen-width: 192rem;
+  --sidebar-width: calc(var(--screen-width) * 0.177); /*34rem*/
+  --marker-height: 3.5rem;
+  --main-window-top: 22rem;  
+  --main-window-left: 18rem;  
+  --main-window-width: calc(var(--screen-width) * 0.583); /*112rem*/
+  --text-window-top: 16rem;  
+  --text-window-left: 10rem;  
+
   --main-color: #FFF;
   --highligh-color: #A276FF;
   --alt-color-1: #f2c94c;
   --control-color: #858585;
   --darkblue: #050729;
+  --menubgd: #0c0e34;
   --vdarkblue: #0b0b0d;
   
-  --thumbs-radius: 11px;
-  --button-radius: 17px;
+  --thumbs-radius: 1.1rem;
+  --button-radius: 1.7rem;
+  --screen-ratio: 0.5625
 }

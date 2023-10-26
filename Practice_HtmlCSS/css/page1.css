@@ -1,67 +1,113 @@
 .dashboard-desktop-child {
-  position: absolute;
-  top: 188px;
-  left: 496px;
-  border-radius: 41px;
+  position: absolute; 
+  top: var(--text-window-top);
+  left: calc(var(--sidebar-width) + var(--text-window-left));
+  width: calc(var(--screen-width) - var(--sidebar-width) - var(--text-window-left) * 2);
+  height: calc(var(--screen-height) - var(--text-window-top));
+  border-radius: 4rem 4rem 0 0;
   background-color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(30px);
-  border: 2px solid var(--fff);
-  box-sizing: border-box;
-  width: 1552px;
-  height: 1424px;
+  overflow: hidden; 
+  display: inline-flex; 
+  flex-direction: column;
+  align-items: start;
 }
 .body-text-container {
-  position: absolute;
-  top: 302px;
-  left: 606px;
+  position: relative;
+  margin-top: 10rem;
+  margin-left: 10rem;
   color: #111;
-  display: inline-block;
-  width: 699px;
-  height: 944px;
-  font-size: var(--body-font-size);
+  width: 62rem;
+  height: 94.5%;
+  font-size: var(--page-font-size);
+  letter-spacing : 0.01em;
+  overflow: hidden; 
 }
-
 .clean-page {
-  margin: 0;
   font-size: var(--big-font-size);
-  font-style: normal;
   font-weight: 700;
 }
-.clean-page1 {
-  line-height: 165.69%;
-}
-.line1 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
 
+.highligh-line {
+  display: block;
+  margin-top: 0.5rem;
+  width: 8rem;
+  height: 0.7rem;
+  border-radius: 1rem;
+  background-color: var(--highligh-color);
+}
 .main-text {
-  margin-top: 15px;
-  margin-bottom: 40px;
-  line-height :155%;
+  line-height :156%;
   font-family: var(--body-font);
 }
-
 .free-help-yourself {
-  margin-bottom: -15px;
+  font-family: var(--main-font);
   font-size: var(--body-font-size2);
-}
-
-.starsky-icon {
+  font-weight: 700;
+ }
+ .starsky {
   position: absolute;
-  top: 291px;
-  left: 1422px;
-  border-radius: 25px;
-  width: 540px;
-  height: 780px;
+  top: 11rem;
+  left: 84rem;
+  width: 41rem;
+  height: 60rem;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.45);
+  border-radius: 2.5rem;
+  border: 0.6rem solid var(--main-color);
+}
+.starsky:hover {
+  border: 0.6rem solid var(--alt-color-1);
+}
+.starsky-icon {
+  height: inherit ;
+  width: 100%;
 }
 .photo-by-judeus {
-  position: absolute;
-  top: 1079px;
-  left: 1572px;
-  font-size: 13px;
+  margin-top: 3rem;
   font-family: var(--alt-font);
-  color: #000;
+  color: var(--vdarkblue);
+}
+@media (max-width: 1399px) {
+  .body-text-container {
+    margin-top: 5rem;
+    margin-left: 5rem;
+    width: 50rem;
+  }
+  .starsky {
+    top: 5rem;
+    left: 60rem;
+    width: 33rem;
+    height: 48rem;
+  }
 }
 
+@media (max-width: 1199px) {
+  body {
+    --text-window-left: 3rem;
+    --text-window-top: 12rem;
+    --page-font-size: 2rem;
+  }
+  .starsky {
+    width: 30rem;
+    height: 44rem;
+  }
+
+  @media (max-width: 991px) {
+    body {
+      --text-window-top: 7rem;
+      --page-font-size: 1.7rem;
+    }
+    .body-text-container {
+      margin-top: 3rem;
+      margin-left: 3rem;
+      width: 50rem;
+  }
+  .home, .dashboard-desktop-child {height: auto;}
+}
+   @media (max-width: 767px) {
+
+   
+  } 
+}

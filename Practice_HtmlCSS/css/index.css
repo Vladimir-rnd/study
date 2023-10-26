@@ -1,94 +1,17 @@
-.thumbs {
+.main-window {
   position: absolute;
-  top: 811px;
-  left: 591px;
-  width: 1273px;
-  height: 156px;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.moon-icon,
-.sunset-icon,
-.crank-icon,
-.murderer-icon {
+  top: var(--main-window-top);
+  left: calc(var(--sidebar-width) + var(--main-window-left));
+  width: var(--main-window-width);
   height: auto;
-  border-radius: var(--thumbs-radius);
-  border: 6px solid var(--main-color);
-}
-.moon-icon:hover,
-.sunset-icon:hover,
-.crank-icon:hover,
-.murderer-icon:hover {
-  border: 6px solid var(--alt-color-1);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: start;
 }
 
-.news {
-  position: absolute;
-  top: 1043px;
-  left: 590px;
-  font-size: var(--news-font-size);
-  line-height: 100px;
-}
-
-.downward-triangle-icon {
-  position: relative;
-  top: 1082px;
-  left: 700px;
-  width: 33px;
-  height: 25px;
-  background-image: url('/img/downward-triangle.svg');
- }
-
- .downward-triangle-icon:hover {
-  background-image: url('/img/downward-triangle-alt.svg');
- }
-
-.button-outline {
-  position: absolute;
-  top: 13px;
-  border-radius: var(--button-radius);
-  border: 3px solid var(--main-color);
-  box-sizing: border-box;
-  width: 352px;
-  height: 70px;
-}
-.button-outline:hover {
-  border-color: var(--alt-color-1);
-}
-
-.learn-more {
-  position: absolute;
-  left: 33px;
-  line-height: 100px;
-  width: 286px;
-  height: 82px;
-}
-
-.button {
-  position: absolute;
-  top: 635px;
-  left: 594px;
-  text-align: center;
-  font-size: var(--button-font-size);
-}
-
-.lorem-ipsum-dolor-container {
-  position: absolute;
-  margin-top: 25px;
-  top: 1113px;
-  left: 594px;
-  font-family: var(--body-font);
-  font-size: var(--basement-font-size);
-  line-height: 165%;
-  font-weight: 500;
-}
-
-.simple-starter-template-container {
-  position: absolute;
-  top: 254px;
-  left: 592px;
-  font-weight: 700 ;
+.simple-starter-templ {
+  width: 85%;
+  font-weight: 700;
 }
 
 .simple-starter {
@@ -100,7 +23,7 @@
   margin: 0;
   color: var(--highligh-color);
   font-size: var(--template-font-size);
-  line-height: 117px;
+  line-height: 64%;
 }
 
 .template:hover {
@@ -108,12 +31,156 @@
 }
 
 .a-clean-simple {
-  position: absolute;
-  top: 484px;
-  left: 593px;
-  width: 1083px;
+  margin-top: 4.4rem;
+  width: 85%;
   font-family: var(--body-font);
   font-size: var(--body-font-size);
-  line-height: 152%;
+  line-height: 145%;
+  letter-spacing: 0.03rem;
 }
 
+.button {
+  margin-top: 2.5rem;
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: var(--button-font-size);
+  border-radius: var(--button-radius);
+  border: 3px solid var(--main-color);
+  background: none;
+  width: 31rem;
+  height: 6rem;
+}
+
+.button:hover {
+  border-color: var(--alt-color-1);
+}
+
+.thumbs {
+  margin-top: 8rem;
+  width: var(--main-window-width);
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.thumbs-icon {
+  width: auto;
+  width: 22rem;
+  height: 11rem;
+  border-radius: var(--thumbs-radius);
+  border: 5px solid var(--main-color);
+}
+
+.thumbs-icon:hover {
+  border: 5px solid var(--alt-color-1);
+}
+
+.NewsBox {
+  margin-top: 9rem;
+  font-size: var(--news-font-size);
+  font-weight: 700;
+}
+
+#downwardTriangle:hover {
+  stroke: #F2C94C;
+}
+
+.lorem-ipsum-dolor-container {
+  margin-top: 1rem;
+  width: 85%;
+  font-family: var(--body-font);
+  font-size: var(--basement-font-size);
+  font-weight: 500;
+}
+
+@media (max-width: 1399px) {
+  .thumbs {
+    width: 98%;
+  }
+
+  .thumbs-icon {
+    width: 22%;
+  }
+
+  #downwardTriangle {
+    width: 3rem;
+    height: 2.3rem
+  }
+}
+
+@media (max-width: 991px) {
+  .button {
+    width: 30%;
+  }
+
+
+}
+
+@media (max-width: 767px) {
+  .thumbs-icon {
+    width: 18rem;
+  }
+
+  body {
+    --button-font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .thumbs {
+    justify-content: space-evenly;
+  }
+
+  .a-clean-simple,
+  .simple-starter-templ,
+  .NewsBox,
+  .lorem-ipsum-dolor-container {
+    align-self: center;
+  }
+
+  .button {
+    margin-left: 4rem;
+  }
+
+  #downwardTriangle {
+    width: 2.5rem;
+    height: 2rem;
+  }
+
+}
+
+@media (max-width: 359px) {
+  .main-window {
+    left: 1rem;
+    width: 36rem;
+    align-self: center;
+  }
+  .button { margin-left: 0; align-self: center;}
+
+  #downwardTriangle {
+    width: 2rem;
+    height: 1.5rem;
+  }
+
+  .thumbs,
+  .NewsBox {
+    margin-top: 3rem;
+  }
+
+  .simple-starter-templ,
+  .a-clean-simple {
+    width: auto;
+  }
+
+  .thumbs-icon {
+    width: 20rem;
+    margin-top: 2rem;
+  }
+
+  .a-clean-simple {
+    width: 70%;
+  }
+
+}

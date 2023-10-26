@@ -1,107 +1,341 @@
 .home {
+  position: absolute;
   width: var(--screen-width);
   height: var(--screen-height);
   color: var(--main-color);
   font-family: var(--main-font);
 }
+
 .dashboard-desktop {
-  width: var(--screen-width);
-  height: var(--screen-height);
-  opacity: 0.9; /*убрать после отладки*/
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
   overflow: hidden;
   background-color: var(--darkblue);
 }
+
 .background {
   position: absolute;
-  width: var(--screen-width);
-  height: var(--screen-height);
+  width: 100%;
+  height: 100%;
 }
+
 .fire_bgd-icon {
   width: 100%;
-  height: var(--screen-height);
+  height: 100%;
   opacity: 0.7;
 }
+
 .sidebar {
   position: absolute;
   background-color: var(--vdarkblue);
   width: var(--sidebar-width);
-  height: var(--screen-height);
+  height: 100%;
   opacity: 0.5;
 }
+
 .menu {
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  top: 72px;
-  width: calc(var(--sidebar-width) * 0.9);
-  height: var(--screen-height);
+  width: calc(var(--sidebar-width) - 5rem);
+  height: 100%;
   align-items: center;
-}
-.menu-item {
   font-size: var(--menu-font-size);
+}
+
+.menu-item {
   color: var(--main-color);
   text-decoration: none;
-  margin-top: 14%;
+  margin-top: 3.5rem;
 }
+
+.active-menu-item {
+  color: var(--highligh-color);
+  margin-left: -1rem;
+  margin-top: 1.5rem;
+}
+
 .active-menu-item::before {
-  position: relative; 
-  content: url('../img/marker.svg'); 
-  right: calc(var(--sidebar-width) * 0.4); /* не научно */
-  top: calc(var(--marker-height) / 3.5); /*тут как-то надо учесть высоту надписей, но пока костыль (*/
+  position: relative;
+  content: url('../img/marker.svg');
+  right: 12rem;
+  top: 1rem;
 }
+
 .menu-item:hover {
   color: var(--alt-color-1);
 }
+
+.support {
+  margin-top: 33rem;
+}
+
 .contact,
-.support,
-.social {
+.support {
   opacity: 0.8;
 }
-.contact {
-  margin-top: 116%;
-}
+
 .contact:hover,
-.support:hover,
-.social:hover {
+.support:hover {
   color: var(--alt-color-1);
 }
+
 .copyright {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   opacity: 0.25;
   margin-top: 23%;
 }
+
 .social-box {
   position: absolute;
-  top: 0;
-  left: 1640px;
-  width: 232px;
-  height: 73px;
+  right: 28rem;
+  width: 20rem;
+  height: 6rem;
   border-radius: 0 0 var(--thumbs-radius) var(--thumbs-radius);
   background-color: var(--highligh-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
 }
+
 .social-box:hover {
   background-color: var(--alt-color-1);
 }
-.twitter-icon {
-  padding-top: 13%;
-  padding-left: 21%;
+
+.heading {
+  margin: 0;
+
 }
-.facebook-icon {
-  padding-left: 38%;
-}
+
 .yourlogo {
-  margin-bottom: 41px;  /* с макета*/
+  position: relative;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  width: calc(var(--sidebar-width) - 5rem);
   font-family: var(--main-font);
   font-size: var(--logo-font-size);
+  text-align: center;
 }
+
 .your {
   color: var(--highligh-color);
   font-weight: 600;
 }
+
 .your:hover {
   color: var(--alt-color-1);
 }
+
 .logo {
-  letter-spacing: 4.5%;
+  letter-spacing: 0.01rem;
   color: var(--main-color);
+  font-weight: 700;
+}
+
+@media (min-width: 359px) {
+  .footer {display: none;}
+}
+
+@media (max-width: 1399px) {
+  body {
+    --screen-width: 140rem;
+    --main-window-width:
+      calc(var(--screen-width) - var(--sidebar-width) - var(--main-window-left) - 2 rem);
+    --main-window-top: 17rem;
+  }
+
+  .social-box {
+    right: 2rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  body {
+    --screen-width: 120rem;
+    --main-window-left: 5rem;
+    --main-window-top: 12rem;
+    --body-font-size: 2.2rem;
+  }
+
+  .support {
+    margin-top: 24rem;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    --screen-width: 99.2rem;
+    --main-window-left: 2rem;
+    --main-window-top: 5rem;
+    --body-font-size: 2rem;
+    --big-font-size: 3rem;
+    --logo-font-size: 2.7rem;
+    --template-font-size: 6.5rem;
+    --news-font-size: 3.5rem;
+    --button-font-size: 1.5rem;
+  }
+
+  .menu {
+    width: calc(var(--sidebar-width))
+  }
+
+  .social-box {
+    width: 13rem;
+    height: 4rem;
+  }
+
+  #facebook-1 {
+    width: 2rem;
+    height: 2rem;
+  }
+  #twitter-1 {
+    width: 2rem;
+    height: 1.8rem;
+  }
+  .support {
+    margin-top: 10rem;
+  }
+  .yourlogo {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    --screen-width: 76.8rem;
+    --logo-font-size: 1.8rem;
+    --body-font-size: 1.8rem;
+    --big-font-size: 2.6rem;
+    --template-font-size: 5.2rem;
+    --news-font-size: 3rem;
+    --button-font-size: 1.2rem;
+  }
+  .support {
+    margin-top: 16rem;
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    --screen-width: 57.6rem;
+    --body-font-size: 1.7rem;
+    --news-font-size: 2.5rem;
+    --button-font-size: 1.2rem;
+  }
+  .social-box {
+    width: 8.33rem;
+    height: 2.5rem;
+    right: 1rem;
+  }
+  #facebook-1 {
+    width: 1.5rem;
+    height: 2rem;
+  }
+  #twitter-1 {
+    width: 2rem;
+    height: 1.3rem;
+  }
+  .support {
+    margin-top: 17rem;
+  }
+  .copyright {
+    text-align: center;
+  }
+}
+
+@media (max-width: 359px) {
+  body {
+    --screen-width: 36rem;
+    --screen-height: 120rem;
+    --sidebar-width: 23rem;
+  }
+  .sidebar,
+  .social-box {
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+    transition-property: width, visibility;
+    transition-duration: 0.2s, 0.2s;
+    transition-timing-function: ease-in;
+    width: 0%;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1px;
+    background-color: var(--menubgd);
+    z-index: 1;
+    top: 0;
+  }
+  .footer {
+    position: absolute;
+    margin-top: 2rem;
+    bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .twitter-mob, 
+  .facebook-mob {
+    height: 3rem;
+    width: 3rem;
+  }
+  .heading {
+    position: fixed;
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  .yourlogo {
+    margin: 0;
+    margin-top: 1.5rem;
+    margin-right: 2.5rem;
+    width: auto;
+  }
+  .burger {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+  }
+  .burger .line {
+    display: block;
+    height: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--main-color);
+  }
+  .burger .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .burger .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  .burger .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .burger.active .line1 {
+    transform: rotate(45deg);
+  }
+  .burger.active .line2 {
+    transform: scaleY(0); 
+  }
+  .burger.active .line3 {
+    transform: rotate(-45deg);
+  }
+  .menu.active {
+    position: fixed;
+    width: 60%;
+    visibility: visible;
+  }
 }
