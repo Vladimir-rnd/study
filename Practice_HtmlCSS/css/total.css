@@ -4,6 +4,7 @@
   height: var(--screen-height);
   color: var(--main-color);
   font-family: var(--main-font);
+  overflow: hidden;
 }
 
 .dashboard-desktop {
@@ -39,7 +40,7 @@
   display: inline-flex;
   flex-direction: column;
   width: calc(var(--sidebar-width) - 5rem);
-  height: 100%;
+  height: auto;
   align-items: center;
   font-size: var(--menu-font-size);
 }
@@ -194,7 +195,7 @@
     height: 1.8rem;
   }
   .support {
-    margin-top: 10rem;
+    margin-top: 16rem;
   }
   .yourlogo {
     margin-left: 2rem;
@@ -211,9 +212,7 @@
     --news-font-size: 3rem;
     --button-font-size: 1.2rem;
   }
-  .support {
-    margin-top: 16rem;
-  }
+
 }
 
 @media (max-width: 575px) {
@@ -235,9 +234,6 @@
   #twitter-1 {
     width: 2rem;
     height: 1.3rem;
-  }
-  .support {
-    margin-top: 17rem;
   }
   .copyright {
     text-align: center;
@@ -266,8 +262,8 @@
     flex-direction: column;
     padding-left: 1px;
     background-color: var(--menubgd);
-    z-index: 1;
-    top: 0;
+    z-index: 1; 
+    top: 6rem;
   }
   .footer {
     position: absolute;
@@ -285,12 +281,12 @@
   }
   .heading {
     position: fixed;
-    width: 100%;
+    width: inherit;
     margin-top: 1rem;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 1;
   }
   .yourlogo {
     margin: 0;
@@ -338,4 +334,5 @@
     width: 60%;
     visibility: visible;
   }
+
 }
