@@ -29,7 +29,7 @@ body {
   --logo-code-size: 12rem; 
   --main-window-top: 13rem;  
   --main-window-left: 18rem;  
-  --main-window-width: calc(var(--screen-width) - var(--sidebar-width) - var(--main-window-left) - 2 rem);
+  --main-window-width: calc(var(--screen-width) - var(--sidebar-width) - var(--main-window-left) - 2rem);
   --text-window-left: 15rem;  
 
   --main-color: #FFF;
