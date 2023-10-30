@@ -155,6 +155,7 @@
   </div>
   <script>
     function toogleProgect(projectId) {
+      if (document.documentElement.clientWidth > 359)
       [].forEach.call(document.getElementsByClassName('projects'), (project) => {
         project.style.display = 'none';
       })
