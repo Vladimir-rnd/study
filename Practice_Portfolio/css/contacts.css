@@ -1,0 +1,14 @@
+.social-box {
+    width: 80%;
+    height: 100%;
+  }
+  .social-icon {
+    width: 20%;
+  }
+
+@media (max-width: 1399px) {body {--screen-height: 108rem;}}
+@media (max-width: 1199px) {body {--screen-height: 108rem;}}
+@media (max-width: 991px) {body {--screen-height: 108rem;}}
+@media (max-width: 767px) {body {--screen-height: 108rem;}}
+@media (max-width: 575px) {body {--screen-height: 108rem;}}
+@media (max-width: 359px) {body {--screen-height: 108rem;}}

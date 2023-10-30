@@ -14,7 +14,7 @@ body {
   /*все размеры будут здесь, для обеих страниц, и чтобы можно было быстро поменять размер*/
   --basement-font-size: 1.6rem; /*14px;*/
   --menu-font-size: 3rem;
-  --button-font-size: 2rem; 
+  --expl-font-size: 2rem; 
   --body-font-size: 3rem;
   --page-font-size: 2.5rem;
   --body-font-size2: 2.3rem;
@@ -37,7 +37,6 @@ body {
   --alt-color-1: #decc95;
   --control-color: #858585;
   --darkblue: #0f185a;
-  --menubgd: #0c0e34;
   --vdarkblue: #0b0b0d;
   
   --thumbs-radius: 1.1rem;

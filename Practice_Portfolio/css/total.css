@@ -113,6 +113,7 @@
   body {
     --screen-width: 140rem;
     --screen-height: 150rem;
+    --body-font-size: 2.5rem;
   }
   .skills {
     margin-left: 10rem;
@@ -127,7 +128,7 @@
     --main-window-top: 10rem;
     --body-font-size: 2.2rem;
   }
-  .thumbs {
+  .main-window > .thumbs {
     width: 98%;
   }
 }
@@ -135,14 +136,13 @@
 @media (max-width: 991px) {
   body {
     --screen-width: 99.2rem;
-    --screen-height: 160rem;
+    --screen-height: 135rem;
     --main-window-left: 3rem;
     --main-window-top: 5rem;
     --body-font-size: 2rem;
     --logo-code-size: 10rem;
     --template-font-size: 6.5rem;
     --news-font-size: 3.5rem;
-    --button-font-size: 1.5rem;
   }
 
   .menu {
@@ -171,8 +171,13 @@
   .template {
     padding-top: 1rem;
   }
+  .main-window > .thumbs {
+    justify-content: center;
+  }
+  .main-window, .thumbs > .project {
+    width: 35rem;
+  } 
 }
-
 
 @media (max-width: 767px) {
   body {
@@ -183,9 +188,10 @@
     --big-font-size: 4rem; 
     --template-font-size: 5.2rem;
     --news-font-size: 3rem;
-    --button-font-size: 1.2rem;
   }
-
+  .copyright {
+    text-align: center;
+  }
   .logo-code {
     margin-top: 1rem;
   }
@@ -197,6 +203,7 @@
     width: 15rem; 
     height: 5rem ;
   }
+
 }
 
 @media (max-width: 575px) {
@@ -205,7 +212,6 @@
     --screen-height: 180rem;
     --body-font-size: 1.7rem;
     --news-font-size: 2.5rem;
-    --button-font-size: 1.2rem;
     --logo-code-size: 7rem;
     --menu-font-size: 2rem;
   }
@@ -215,9 +221,7 @@
     height: 2.5rem;
     right: 1rem;
   }
-  .copyright {
-    text-align: center;
-  }
+
 
   .logo-code {
     margin-top: 0.5rem;
@@ -255,7 +259,7 @@
   }
   .skills-icon {width: 10rem;}
 
-  .thumbs {
+  .main-window > .thumbs {
     margin-top: 3rem;
   } 
 
@@ -290,9 +294,10 @@
     display: flex;
     flex-direction: column;
     padding-left: 1px;
-    background-color: var(--menubgd);
+    background-color: var(--darkblue);
     z-index: 1;
     top: 6rem;
+    height: inherit;
   }
   .menu.active {
     position: fixed;
@@ -328,7 +333,7 @@
   .yourlogo {
     margin: 0;
     margin-top: 1rem;
-    margin-right: 0.5rem;
+    margin-right: 2.5rem;
     flex-direction: row;
     align-items: self-start;
     width: 12rem;
